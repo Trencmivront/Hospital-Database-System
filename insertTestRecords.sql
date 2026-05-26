@@ -1,0 +1,627 @@
+-- Insert Test Records for Hospital Database System (Oracle Compatible)
+
+-- 1. Location Hierarchy
+INSERT INTO Country (country_name) VALUES ('Turkiye');
+INSERT INTO Country (country_name) VALUES ('USA');
+INSERT INTO Country (country_name) VALUES ('UK');
+INSERT INTO Country (country_name) VALUES ('Germany');
+INSERT INTO Country (country_name) VALUES ('France');
+INSERT INTO Country (country_name) VALUES ('Italy');
+INSERT INTO Country (country_name) VALUES ('Spain');
+INSERT INTO Country (country_name) VALUES ('Japan');
+INSERT INTO Country (country_name) VALUES ('China');
+INSERT INTO Country (country_name) VALUES ('Canada');
+INSERT INTO Country (country_name) VALUES ('Australia');
+INSERT INTO Country (country_name) VALUES ('Brazil');
+INSERT INTO Country (country_name) VALUES ('Russia');
+INSERT INTO Country (country_name) VALUES ('India');
+INSERT INTO Country (country_name) VALUES ('Netherlands');
+INSERT INTO Country (country_name) VALUES ('Switzerland');
+INSERT INTO Country (country_name) VALUES ('Sweden');
+INSERT INTO Country (country_name) VALUES ('Norway');
+INSERT INTO Country (country_name) VALUES ('Denmark');
+INSERT INTO Country (country_name) VALUES ('Belgium');
+INSERT INTO Country (country_name) VALUES ('Austria');
+INSERT INTO Country (country_name) VALUES ('Portugal');
+INSERT INTO Country (country_name) VALUES ('Greece');
+INSERT INTO Country (country_name) VALUES ('South Korea');
+INSERT INTO Country (country_name) VALUES ('Mexico');
+
+INSERT INTO Province (province_name, country_id) VALUES ('Istanbul', 1);
+INSERT INTO Province (province_name, country_id) VALUES ('Ankara', 1);
+INSERT INTO Province (province_name, country_id) VALUES ('Izmir', 1);
+INSERT INTO Province (province_name, country_id) VALUES ('New York', 2);
+INSERT INTO Province (province_name, country_id) VALUES ('California', 2);
+INSERT INTO Province (province_name, country_id) VALUES ('Texas', 2);
+INSERT INTO Province (province_name, country_id) VALUES ('London', 3);
+INSERT INTO Province (province_name, country_id) VALUES ('Manchester', 3);
+INSERT INTO Province (province_name, country_id) VALUES ('Berlin', 4);
+INSERT INTO Province (province_name, country_id) VALUES ('Munich', 4);
+INSERT INTO Province (province_name, country_id) VALUES ('Paris', 5);
+INSERT INTO Province (province_name, country_id) VALUES ('Rome', 6);
+INSERT INTO Province (province_name, country_id) VALUES ('Madrid', 7);
+INSERT INTO Province (province_name, country_id) VALUES ('Tokyo', 8);
+INSERT INTO Province (province_name, country_id) VALUES ('Beijing', 9);
+INSERT INTO Province (province_name, country_id) VALUES ('Toronto', 10);
+INSERT INTO Province (province_name, country_id) VALUES ('Sydney', 11);
+INSERT INTO Province (province_name, country_id) VALUES ('Sao Paulo', 12);
+INSERT INTO Province (province_name, country_id) VALUES ('Moscow', 13);
+INSERT INTO Province (province_name, country_id) VALUES ('Mumbai', 14);
+INSERT INTO Province (province_name, country_id) VALUES ('Amsterdam', 15);
+INSERT INTO Province (province_name, country_id) VALUES ('Zurich', 16);
+INSERT INTO Province (province_name, country_id) VALUES ('Stockholm', 17);
+INSERT INTO Province (province_name, country_id) VALUES ('Oslo', 18);
+INSERT INTO Province (province_name, country_id) VALUES ('Copenhagen', 19);
+
+INSERT INTO District (district_name, province_id) VALUES ('Kadikoy', 1);
+INSERT INTO District (district_name, province_id) VALUES ('Besiktas', 1);
+INSERT INTO District (district_name, province_id) VALUES ('Cankaya', 2);
+INSERT INTO District (district_name, province_id) VALUES ('Konak', 3);
+INSERT INTO District (district_name, province_id) VALUES ('Manhattan', 4);
+INSERT INTO District (district_name, province_id) VALUES ('Brooklyn', 4);
+INSERT INTO District (district_name, province_id) VALUES ('Los Angeles', 5);
+INSERT INTO District (district_name, province_id) VALUES ('Houston', 6);
+INSERT INTO District (district_name, province_id) VALUES ('Westminster', 7);
+INSERT INTO District (district_name, province_id) VALUES ('Camden', 7);
+INSERT INTO District (district_name, province_id) VALUES ('Salford', 8);
+INSERT INTO District (district_name, province_id) VALUES ('Mitte', 9);
+INSERT INTO District (district_name, province_id) VALUES ('Charlottenburg', 9);
+INSERT INTO District (district_name, province_id) VALUES ('Maxvorstadt', 10);
+INSERT INTO District (district_name, province_id) VALUES ('Le Marais', 11);
+INSERT INTO District (district_name, province_id) VALUES ('Trastevere', 12);
+INSERT INTO District (district_name, province_id) VALUES ('Retiro', 13);
+INSERT INTO District (district_name, province_id) VALUES ('Shinjuku', 14);
+INSERT INTO District (district_name, province_id) VALUES ('Chaoyang', 15);
+INSERT INTO District (district_name, province_id) VALUES ('North York', 16);
+INSERT INTO District (district_name, province_id) VALUES ('CBD', 17);
+INSERT INTO District (district_name, province_id) VALUES ('Pinheiros', 18);
+INSERT INTO District (district_name, province_id) VALUES ('Arbat', 19);
+INSERT INTO District (district_name, province_id) VALUES ('Bandra West', 20);
+INSERT INTO District (district_name, province_id) VALUES ('Centrum', 21);
+
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Moda', 1, '34710');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Caferaga', 1, '34711');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Etiler', 2, '34337');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Bahcelievler', 3, '06490');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Alsancak', 4, '35220');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Upper East Side', 5, '10021');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Williamsburg', 6, '11211');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Santa Monica', 7, '90401');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Downtown', 8, '77002');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Soho', 9, 'W1D');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Covent Garden', 9, 'WC2H');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Primrose Hill', 10, 'NW1');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Quays', 11, 'M50');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Alexanderplatz', 12, '10178');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Tiergarten', 12, '10557');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Savignyplatz', 13, '10623');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Univ-Quarter', 14, '80799');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Saint-Paul', 15, '75004');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Janiculum', 16, '00153');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Jerónimos', 17, '28014');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Kabukicho', 18, '160-0021');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Sanlitun', 19, '100027');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Willowdale', 20, 'M2N');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('The Rocks', 21, '2000');
+INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Vila Madalena', 22, '05445-000');
+
+-- Bulk Addresses (150 addresses)
+INSERT INTO Address (neighbourhood_id) 
+SELECT TRUNC(DBMS_RANDOM.VALUE(1, 26)) FROM DUAL CONNECT BY LEVEL <= 150;
+
+-- 2. Metadata
+INSERT INTO Blood_Type (type_name) VALUES ('A+');
+INSERT INTO Blood_Type (type_name) VALUES ('A-');
+INSERT INTO Blood_Type (type_name) VALUES ('B+');
+INSERT INTO Blood_Type (type_name) VALUES ('B-');
+INSERT INTO Blood_Type (type_name) VALUES ('AB+');
+INSERT INTO Blood_Type (type_name) VALUES ('AB-');
+INSERT INTO Blood_Type (type_name) VALUES ('O+');
+INSERT INTO Blood_Type (type_name) VALUES ('O-');
+
+INSERT INTO ICD10 (icd10_code, description) VALUES ('I10', 'Essential (primary) hypertension');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('E11.9', 'Type 2 diabetes mellitus without complications');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('J06.9', 'Acute upper respiratory infection, unspecified');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('M54.5', 'Low back pain');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('K21.9', 'Gastro-esophageal reflux disease without esophagitis');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('F32.9', 'Major depressive disorder, single episode, unspecified');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('N39.0', 'Urinary tract infection, site not specified');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('G43.909', 'Migraine, unspecified, not intractable, without status migsignosus');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('Z00.00', 'Encounter for general adult medical examination without abnormal findings');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('L20.9', 'Atopic dermatitis, unspecified');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('H10.9', 'Unspecified conjunctivitis');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('I25.10', 'Atherosclerotic heart disease of native coronary artery without angina pectoris');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('M17.9', 'Osteoarthritis of knee, unspecified');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('R05', 'Cough');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('F41.1', 'Generalized anxiety disorder');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('E03.9', 'Hypothyroidism, unspecified');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('B35.1', 'Tinea unguium');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('N40.0', 'Benign prostatic hyperplasia without lower urinary tract symptoms');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('M54.2', 'Cervicalgia');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('R51', 'Headache');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('J45.909', 'Unspecified asthma, uncomplicated');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('K29.70', 'Gastritis, unspecified, without bleeding');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('M51.26', 'Other intervertebral disc displacement, lumbar region');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('Q67.4', 'Other congenital deformities of skull, face and jaw');
+INSERT INTO ICD10 (icd10_code, description) VALUES ('S06.0X0A', 'Concussion without loss of consciousness, initial encounter');
+
+INSERT INTO Job_Status (status_name) VALUES ('ACTIVE');
+INSERT INTO Job_Status (status_name) VALUES ('RETIRED');
+INSERT INTO Job_Status (status_name) VALUES ('OFFDUTY');
+INSERT INTO Job_Status (status_name) VALUES ('FIRED');
+
+INSERT INTO Specialization (spec_name) VALUES ('Cardiology');
+INSERT INTO Specialization (spec_name) VALUES ('Internal Medicine');
+INSERT INTO Specialization (spec_name) VALUES ('Pediatrics');
+INSERT INTO Specialization (spec_name) VALUES ('Neurology');
+INSERT INTO Specialization (spec_name) VALUES ('Dermatology');
+INSERT INTO Specialization (spec_name) VALUES ('Psychiatry');
+INSERT INTO Specialization (spec_name) VALUES ('Radiology');
+INSERT INTO Specialization (spec_name) VALUES ('Orthopedics');
+INSERT INTO Specialization (spec_name) VALUES ('Ophthalmology');
+INSERT INTO Specialization (spec_name) VALUES ('General Surgery');
+INSERT INTO Specialization (spec_name) VALUES ('Urology');
+INSERT INTO Specialization (spec_name) VALUES ('Gynecology');
+INSERT INTO Specialization (spec_name) VALUES ('Endocrinology');
+INSERT INTO Specialization (spec_name) VALUES ('Oncology');
+INSERT INTO Specialization (spec_name) VALUES ('Nephrology');
+INSERT INTO Specialization (spec_name) VALUES ('Pulmonology');
+INSERT INTO Specialization (spec_name) VALUES ('Gastroenterology');
+INSERT INTO Specialization (spec_name) VALUES ('Rheumatology');
+INSERT INTO Specialization (spec_name) VALUES ('Otolaryngology');
+INSERT INTO Specialization (spec_name) VALUES ('Anesthesiology');
+INSERT INTO Specialization (spec_name) VALUES ('Pathology');
+INSERT INTO Specialization (spec_name) VALUES ('Emergency Medicine');
+INSERT INTO Specialization (spec_name) VALUES ('Physical Medicine');
+INSERT INTO Specialization (spec_name) VALUES ('Medical Genetics');
+INSERT INTO Specialization (spec_name) VALUES ('Infectious Disease');
+
+INSERT INTO Payment_Method (type_name) VALUES ('Cash');
+INSERT INTO Payment_Method (type_name) VALUES ('Credit Card');
+INSERT INTO Payment_Method (type_name) VALUES ('Insurance');
+INSERT INTO Payment_Method (type_name) VALUES ('Bank Transfer');
+INSERT INTO Payment_Method (type_name) VALUES ('Apple Pay');
+INSERT INTO Payment_Method (type_name) VALUES ('Google Pay');
+INSERT INTO Payment_Method (type_name) VALUES ('PayPal');
+INSERT INTO Payment_Method (type_name) VALUES ('Venmo');
+INSERT INTO Payment_Method (type_name) VALUES ('Zelle');
+INSERT INTO Payment_Method (type_name) VALUES ('Cashier''s Check');
+INSERT INTO Payment_Method (type_name) VALUES ('Personal Check');
+INSERT INTO Payment_Method (type_name) VALUES ('Bitcoin');
+INSERT INTO Payment_Method (type_name) VALUES ('Ethereum');
+INSERT INTO Payment_Method (type_name) VALUES ('Litecoin');
+INSERT INTO Payment_Method (type_name) VALUES ('Klarna');
+INSERT INTO Payment_Method (type_name) VALUES ('Affirm');
+INSERT INTO Payment_Method (type_name) VALUES ('Afterpay');
+INSERT INTO Payment_Method (type_name) VALUES ('Wise');
+INSERT INTO Payment_Method (type_name) VALUES ('Revolut');
+INSERT INTO Payment_Method (type_name) VALUES ('Cash App');
+INSERT INTO Payment_Method (type_name) VALUES ('Skrill');
+INSERT INTO Payment_Method (type_name) VALUES ('Neteller');
+INSERT INTO Payment_Method (type_name) VALUES ('Western Union');
+INSERT INTO Payment_Method (type_name) VALUES ('MoneyGram');
+INSERT INTO Payment_Method (type_name) VALUES ('Payoneer');
+
+-- 3. Schedules for June 3 and June 8, 2026
+-- 36 slots per day (9 hours * 4 slots/hour)
+INSERT INTO Schedule (schedule_date, schedule_time) 
+WITH hours AS (SELECT level + 7 AS h FROM dual CONNECT BY level <= 10),
+     mins AS (SELECT (level - 1) * 15 AS m FROM dual CONNECT BY level <= 4)
+SELECT DATE '2026-06-03', 
+       TO_TIMESTAMP('2026-06-03 ' || LPAD(h, 2, '0') || ':' || LPAD(m, 2, '0') || ':00', 'YYYY-MM-DD HH24:MI:SS')
+FROM hours CROSS JOIN mins
+WHERE h <> 12;
+
+INSERT INTO Schedule (schedule_date, schedule_time) 
+WITH hours AS (SELECT level + 7 AS h FROM dual CONNECT BY level <= 10),
+     mins AS (SELECT (level - 1) * 15 AS m FROM dual CONNECT BY level <= 4)
+SELECT DATE '2026-06-08', 
+       TO_TIMESTAMP('2026-06-08 ' || LPAD(h, 2, '0') || ':' || LPAD(m, 2, '0') || ':00', 'YYYY-MM-DD HH24:MI:SS')
+FROM hours CROSS JOIN mins
+WHERE h <> 12;
+
+-- 4. Emergency Persons
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('John', 'Doe', '555-0001', 'M');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Jane', 'Smith', '555-0002', 'F');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Mehmet', 'Yilmaz', '555-0003', 'M');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Ayse', 'Kaya', '555-0004', 'F');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Robert', 'Brown', '555-0005', 'M');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Emily', 'Davis', '555-0006', 'F');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Michael', 'Wilson', '555-0007', 'M');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Sarah', 'Miller', '555-0008', 'F');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('David', 'Taylor', '555-0009', 'M');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Linda', 'Anderson', '555-0010', 'F');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('James', 'Moore', '555-0011', 'M');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Patricia', 'Taylor', '555-0012', 'F');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Christopher', 'Thomas', '555-0013', 'M');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Barbara', 'Jackson', '555-0014', 'F');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Thomas', 'Anderson', '555-0015', 'M');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Sarah', 'Connor', '555-0016', 'F');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Bruce', 'Wayne', '555-0017', 'M');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Clark', 'Kent', '555-0018', 'M');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Diana', 'Prince', '555-0019', 'F');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Peter', 'Parker', '555-0020', 'M');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Tony', 'Stark', '555-0021', 'M');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Natasha', 'Romanoff', '555-0022', 'F');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Steve', 'Rogers', '555-0023', 'M');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Wanda', 'Maximoff', '555-0024', 'F');
+INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Bucky', 'Barnes', '555-0025', 'M');
+
+-- 5. Doctors (25 Doctors)
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Gregory', 'House', DATE '1959-05-15', '101', '555-1001', 'house@hospital.com', 'M', 0, 1, 1, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('James', 'Wilson', DATE '1967-02-28', '102', '555-1002', 'wilson@hospital.com', 'M', 0, 1, 2, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Lisa', 'Cuddy', DATE '1966-07-03', '103', '555-1003', 'cuddy@hospital.com', 'F', 0, 1, 3, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Eric', 'Foreman', DATE '1973-07-23', '104', '555-1004', 'foreman@hospital.com', 'M', 0, 1, 4, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Allison', 'Cameron', DATE '1979-04-12', '105', '555-1005', 'cameron@hospital.com', 'F', 1, 1, 5, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Robert', 'Chase', DATE '1979-02-12', '106', '555-1006', 'chase@hospital.com', 'M', 0, 1, 6, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Chris', 'Taub', DATE '1967-10-10', '107', '555-1007', 'taub@hospital.com', 'M', 1, 1, 7, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Remy', 'Hadley', DATE '1984-03-10', '108', '555-1008', 'thirteen@hospital.com', 'F', 0, 1, 8, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Lawrence', 'Kutner', DATE '1975-01-01', '109', '555-1009', 'kutner@hospital.com', 'M', 0, 1, 9, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Martha', 'Masters', DATE '1988-11-11', '110', '555-1010', 'masters@hospital.com', 'F', 0, 1, 10, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Chi', 'Park', DATE '1985-12-12', '111', '555-1011', 'park@hospital.com', 'F', 0, 1, 11, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Jessica', 'Adams', DATE '1982-06-06', '112', '555-1012', 'adams@hospital.com', 'F', 0, 1, 12, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Amber', 'Volakis', DATE '1980-01-20', '113', '555-1013', 'amber@hospital.com', 'F', 0, 1, 13, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Lucas', 'Douglas', DATE '1975-03-15', '114', '555-1014', 'lucas@hospital.com', 'M', 0, 1, 14, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Stacy', 'Warner', DATE '1965-09-30', '115', '555-1015', 'stacy@hospital.com', 'F', 1, 1, 15, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Stephen', 'Strange', DATE '1976-11-18', '201', '555-1016', 'strange@hospital.com', 'M', 0, 1, 16, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('John', 'Watson', DATE '1971-08-16', '202', '555-1017', 'watson@hospital.com', 'M', 1, 1, 17, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Dana', 'Scully', DATE '1964-02-23', '203', '555-1018', 'scully@hospital.com', 'F', 0, 1, 18, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Leonard', 'McCoy', DATE '1920-01-20', '204', '555-1019', 'bones@hospital.com', 'M', 0, 1, 19, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Beverly', 'Crusher', DATE '1948-10-13', '205', '555-1020', 'crusher@hospital.com', 'F', 1, 1, 20, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Juliet', 'Douglas', DATE '1980-05-05', '206', '555-1021', 'juliet@hospital.com', 'F', 0, 1, 21, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Jack', 'Shephard', DATE '1969-07-20', '207', '555-1022', 'shephard@hospital.com', 'M', 0, 1, 22, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Christian', 'Shephard', DATE '1945-12-15', '208', '555-1023', 'christian@hospital.com', 'M', 1, 1, 23, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Meredith', 'Grey', DATE '1978-11-10', '209', '555-1024', 'grey@hospital.com', 'F', 1, 1, 24, NULL);
+INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Derek', 'Shepherd', DATE '1966-08-16', '210', '555-1025', 'mcdreamy@hospital.com', 'M', 1, 1, 25, NULL);
+
+-- 6. Departments (25 Departments)
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Diagnostic Medicine', '555-2001', 'Specializes in difficult cases.', 1);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Oncology', '555-2002', 'Cancer treatment and research.', 2);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Administration', '555-2003', 'Hospital management.', 3);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Neurology', '555-2004', 'Nervous system disorders.', 4);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Immunology', '555-2005', 'Immune system studies.', 5);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Surgery', '555-2006', 'General surgical procedures.', 6);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Emergency', '555-2007', 'Acute care services.', 12);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Cardiology', '555-2008', 'Heart health and treatment.', 16);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Pediatrics', '555-2009', 'Child healthcare.', 17);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Dermatology', '555-2010', 'Skin conditions.', 18);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Psychiatry', '555-2011', 'Mental health services.', 19);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Radiology', '555-2012', 'Imaging and diagnostics.', 20);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Orthopedics', '555-2013', 'Bone and joint care.', 21);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Ophthalmology', '555-2014', 'Eye care.', 22);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('General Surgery', '555-2015', 'Surgical interventions.', 23);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Urology', '555-2016', 'Urinary tract health.', 24);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Gynecology', '555-2017', 'Women''s health.', 25);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Endocrinology', '555-2018', 'Hormone disorders.', 11);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Nephrology', '555-2019', 'Kidney health.', 8);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Pulmonology', '555-2020', 'Respiratory system.', 9);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Gastroenterology', '555-2021', 'Digestive system.', 10);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Rheumatology', '555-2022', 'Joint and muscle diseases.', 13);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Otolaryngology', '555-2023', 'Ear, nose, and throat.', 14);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Anesthesiology', '555-2024', 'Pain management and anesthesia.', 15);
+INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Pathology', '555-2025', 'Laboratory diagnostics.', 7);
+
+-- 7. Update Doctors with Department IDs
+UPDATE Doctor SET dept_id = 1 WHERE doctor_id IN (1, 8, 9, 10, 11);
+UPDATE Doctor SET dept_id = 2 WHERE doctor_id = 2;
+UPDATE Doctor SET dept_id = 3 WHERE doctor_id = 3;
+UPDATE Doctor SET dept_id = 4 WHERE doctor_id = 4;
+UPDATE Doctor SET dept_id = 5 WHERE doctor_id = 5;
+UPDATE Doctor SET dept_id = 6 WHERE doctor_id IN (6, 7);
+UPDATE Doctor SET dept_id = 7 WHERE doctor_id IN (12, 13, 14, 15);
+UPDATE Doctor SET dept_id = 8 WHERE doctor_id = 16;
+UPDATE Doctor SET dept_id = 9 WHERE doctor_id = 17;
+UPDATE Doctor SET dept_id = 10 WHERE doctor_id = 18;
+UPDATE Doctor SET dept_id = 11 WHERE doctor_id = 19;
+UPDATE Doctor SET dept_id = 12 WHERE doctor_id = 20;
+UPDATE Doctor SET dept_id = 13 WHERE doctor_id = 21;
+UPDATE Doctor SET dept_id = 14 WHERE doctor_id = 22;
+UPDATE Doctor SET dept_id = 15 WHERE doctor_id = 23;
+UPDATE Doctor SET dept_id = 16 WHERE doctor_id = 24;
+UPDATE Doctor SET dept_id = 17 WHERE doctor_id = 25;
+
+-- 8. Patients (40 Patients)
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Alice', 'Wonderland', DATE '1995-03-12', 'F', '555-3001', 'alice@wonder.com', 1, 16);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Bob', 'Builder', DATE '1980-11-20', 'M', '555-3002', 'bob@build.com', 3, 17);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Charlie', 'Brown', DATE '2010-10-30', 'M', '555-3003', 'charlie@peanuts.com', 7, 18);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Diana', 'Prince', DATE '1985-05-20', 'F', '555-3004', 'diana@themyscira.com', 5, 19);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Edward', 'Norton', DATE '1969-08-18', 'M', '555-3005', 'edward@fightclub.com', 2, 20);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Fiona', 'Shrek', DATE '1990-04-05', 'F', '555-3006', 'fiona@swamp.com', 4, 21);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('George', 'Costanza', DATE '1959-12-15', 'M', '555-3007', 'george@vandelay.com', 8, 22);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Hannah', 'Baker', DATE '2000-01-01', 'F', '555-3008', 'hannah@tapes.com', 6, 23);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Ian', 'McKellen', DATE '1939-05-25', 'M', '555-3009', 'ian@gandalf.com', 1, 24);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Julia', 'Roberts', DATE '1967-10-28', 'F', '555-3010', 'julia@hollywood.com', 3, 25);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Kevin', 'Spacey', DATE '1959-07-26', 'M', '555-3011', 'kevin@usualsuspects.com', 5, 26);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Lara', 'Croft', DATE '1992-02-14', 'F', '555-3012', 'lara@tombraider.com', 2, 27);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Mickey', 'Mouse', DATE '1928-11-18', 'M', '555-3013', 'mickey@disney.com', 4, 28);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Nancy', 'Drew', DATE '2005-05-05', 'F', '555-3014', 'nancy@mystery.com', 8, 29);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Oscar', 'Grouch', DATE '1969-11-10', 'M', '555-3015', 'oscar@sesame.com', 6, 30);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Peter', 'Parker', DATE '2001-08-10', 'M', '555-3016', 'peter@dailybugle.com', 1, 31);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Quinn', 'Harley', DATE '1990-07-20', 'F', '555-3017', 'quinn@arkham.com', 3, 32);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Riley', 'Reid', DATE '1991-07-09', 'F', '555-3018', 'riley@test.com', 7, 33);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Steve', 'Rogers', DATE '1918-07-04', 'M', '555-3019', 'steve@avengers.com', 5, 34);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Tony', 'Stark', DATE '1970-05-29', 'M', '555-3020', 'tony@starkindustries.com', 2, 35);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Ursula', 'Sea', DATE '1975-02-02', 'F', '555-3021', 'ursula@disney.com', 4, 36);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Victor', 'Frankenstein', DATE '1800-01-01', 'M', '555-3022', 'victor@monster.com', 8, 37);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Wanda', 'Maximoff', DATE '1989-02-10', 'F', '555-3023', 'wanda@avengers.com', 6, 38);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Xavier', 'Charles', DATE '1940-05-05', 'M', '555-3024', 'xavier@xmen.com', 1, 39);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Yoda', 'Grand', DATE '0900-01-01', 'M', '555-3025', 'yoda@jedi.com', 3, 40);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Zelda', 'Hyrule', DATE '1998-02-21', 'F', '555-3026', 'zelda@nintendo.com', 5, 41);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Arthur', 'Morgan', DATE '1863-01-01', 'M', '555-3027', 'arthur@rdr2.com', 2, 42);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Bella', 'Swan', DATE '1987-09-13', 'F', '555-3028', 'bella@twilight.com', 4, 43);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Clark', 'Kent', DATE '1978-06-18', 'M', '555-3029', 'clark@dailyplanet.com', 8, 44);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Don', 'Draper', DATE '1926-06-01', 'M', '555-3030', 'don@madmen.com', 6, 45);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Ellen', 'Ripley', DATE '2092-01-07', 'F', '555-3031', 'ripley@alien.com', 1, 46);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Frodo', 'Baggins', DATE '2968-09-22', 'M', '555-3032', 'frodo@shire.com', 3, 47);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Geralt', 'Rivia', DATE '1200-01-01', 'M', '555-3033', 'geralt@witcher.com', 5, 48);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Harry', 'Potter', DATE '1980-07-31', 'M', '555-3034', 'harry@hogwarts.com', 2, 49);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Iris', 'West', DATE '1990-06-24', 'F', '555-3035', 'iris@centralcity.com', 4, 50);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Joel', 'Miller', DATE '1981-09-26', 'M', '555-3036', 'joel@lastofus.com', 8, 51);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Katniss', 'Everdeen', DATE '1994-05-08', 'F', '555-3037', 'katniss@district12.com', 6, 52);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Luke', 'Skywalker', DATE '1951-09-25', 'M', '555-3038', 'luke@tatooine.com', 1, 53);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Mary', 'Jane', DATE '1982-08-15', 'F', '555-3039', 'mj@dailybugle.com', 3, 54);
+INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Neo', 'Anderson', DATE '1962-03-11', 'M', '555-3040', 'neo@matrix.com', 5, 55);
+
+-- 8.5 Doctor_Schedule (Availability matching appointments)
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (1, 1, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (1, 2, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (1, 3, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (1, 4, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (2, 5, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (2, 6, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (2, 7, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (2, 8, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (3, 9, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (3, 10, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (4, 11, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (4, 12, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (5, 13, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (5, 14, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (6, 15, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (6, 16, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (7, 17, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (7, 18, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (8, 19, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (8, 20, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (9, 21, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (10, 22, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (11, 23, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (12, 24, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (13, 25, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (14, 26, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (15, 27, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (1, 28, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (2, 29, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (3, 30, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (4, 31, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (5, 32, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (6, 33, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (7, 34, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (8, 35, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (9, 36, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (10, 1, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (11, 2, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (12, 3, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (13, 4, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (14, 37, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (15, 38, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (1, 39, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (2, 40, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (3, 41, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (4, 42, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (5, 43, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (6, 44, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (7, 45, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (8, 46, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (9, 47, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (10, 48, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (11, 49, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (12, 50, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (13, 51, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (14, 52, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (15, 53, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (1, 54, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (2, 55, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (3, 56, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (4, 57, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (5, 58, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (6, 59, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (7, 60, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (8, 61, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (9, 62, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (10, 63, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (11, 64, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (12, 65, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (13, 66, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (14, 67, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (15, 68, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (1, 69, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (2, 70, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (3, 71, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (4, 72, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (5, 37, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (6, 38, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (7, 39, 1);
+INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (8, 40, 1);
+
+-- 9. Appointments (80 total, 40 per day)
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 1, 1, 1);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 2, 1, 2);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 3, 1, 3);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 4, 1, 4);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 5, 2, 5);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 6, 2, 6);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 7, 2, 7);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 8, 2, 8);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 9, 3, 9);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 10, 3, 10);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 11, 4, 11);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 12, 4, 12);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 13, 5, 13);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 14, 5, 14);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 15, 6, 15);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 16, 6, 16);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 17, 7, 17);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 18, 7, 18);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 19, 8, 19);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 20, 8, 20);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 21, 9, 21);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 22, 10, 22);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 23, 11, 23);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 24, 12, 24);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 25, 13, 25);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 26, 14, 26);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 27, 15, 27);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 28, 1, 28);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 29, 2, 29);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 30, 3, 30);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 31, 4, 31);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 32, 5, 32);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 33, 6, 33);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 34, 7, 34);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 35, 8, 35);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 36, 9, 36);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 37, 10, 1);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 38, 11, 2);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 39, 12, 3);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 40, 13, 4);
+
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 1, 14, 37);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 2, 15, 38);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 3, 1, 39);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 4, 2, 40);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 5, 3, 41);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 6, 4, 42);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 7, 5, 43);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 8, 6, 44);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 9, 7, 45);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 10, 8, 46);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 11, 9, 47);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 12, 10, 48);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 13, 11, 49);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 14, 12, 50);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 15, 13, 51);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 16, 14, 52);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 17, 15, 53);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 18, 1, 54);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 19, 2, 55);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 20, 3, 56);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 21, 4, 57);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 22, 5, 58);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 23, 6, 59);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 24, 7, 60);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 25, 8, 61);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 26, 9, 62);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 27, 10, 63);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 28, 11, 64);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 29, 12, 65);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 30, 13, 66);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 31, 14, 67);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 32, 15, 68);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 33, 1, 69);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 34, 2, 70);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 35, 3, 71);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 36, 4, 72);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 37, 5, 37);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 38, 6, 38);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 39, 7, 39);
+INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 40, 8, 40);
+
+-- 10. Treatments
+INSERT INTO Treatment (appointment_id, icd10_id) 
+SELECT appointment_id, TRUNC(DBMS_RANDOM.VALUE(1, 26)) FROM Appointment;
+
+-- 11. Bills
+INSERT INTO Bill (treatment_id, total_amount, tax, payment_id, is_paid) 
+SELECT treatment_id, 
+       100 + DBMS_RANDOM.VALUE(0, 900), 
+       20 + DBMS_RANDOM.VALUE(0, 180), 
+       TRUNC(DBMS_RANDOM.VALUE(1, 26)), 
+       CASE WHEN DBMS_RANDOM.VALUE(0, 1) > 0.4 THEN 1 ELSE 0 END
+FROM Treatment;
+
+-- 12. Allergies (25 Allergies)
+INSERT INTO Allergy (icd10_id) VALUES (1);
+INSERT INTO Allergy (icd10_id) VALUES (2);
+INSERT INTO Allergy (icd10_id) VALUES (3);
+INSERT INTO Allergy (icd10_id) VALUES (4);
+INSERT INTO Allergy (icd10_id) VALUES (5);
+INSERT INTO Allergy (icd10_id) VALUES (6);
+INSERT INTO Allergy (icd10_id) VALUES (7);
+INSERT INTO Allergy (icd10_id) VALUES (8);
+INSERT INTO Allergy (icd10_id) VALUES (9);
+INSERT INTO Allergy (icd10_id) VALUES (10);
+INSERT INTO Allergy (icd10_id) VALUES (11);
+INSERT INTO Allergy (icd10_id) VALUES (12);
+INSERT INTO Allergy (icd10_id) VALUES (13);
+INSERT INTO Allergy (icd10_id) VALUES (14);
+INSERT INTO Allergy (icd10_id) VALUES (15);
+INSERT INTO Allergy (icd10_id) VALUES (16);
+INSERT INTO Allergy (icd10_id) VALUES (17);
+INSERT INTO Allergy (icd10_id) VALUES (18);
+INSERT INTO Allergy (icd10_id) VALUES (19);
+INSERT INTO Allergy (icd10_id) VALUES (20);
+INSERT INTO Allergy (icd10_id) VALUES (21);
+INSERT INTO Allergy (icd10_id) VALUES (22);
+INSERT INTO Allergy (icd10_id) VALUES (23);
+INSERT INTO Allergy (icd10_id) VALUES (24);
+INSERT INTO Allergy (icd10_id) VALUES (25);
+
+-- 13. Junction Tables
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (1, 1);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (1, 2);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (2, 2);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (3, 3);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (4, 4);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (5, 5);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (6, 6);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (7, 7);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (8, 8);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (9, 9);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (10, 10);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (11, 4);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (12, 10);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (13, 10);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (14, 11);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (15, 12);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (16, 14);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (17, 3);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (18, 5);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (19, 6);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (20, 7);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (21, 8);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (22, 9);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (23, 10);
+INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (24, 11);
+
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (1, 1);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (3, 2);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (8, 3);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (12, 4);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (15, 1);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (22, 5);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (30, 2);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (35, 4);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (38, 3);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (40, 5);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (2, 6);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (4, 7);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (5, 8);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (6, 9);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (7, 11);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (9, 12);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (10, 13);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (11, 14);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (13, 16);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (14, 17);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (16, 18);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (17, 19);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (18, 21);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (19, 22);
+INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (20, 23);
+
+-- Patient - Emergency Person (Each patient has 1)
+INSERT INTO Patient_Emergency_Person (patient_id, emergency_id) 
+SELECT p.patient_id, TRUNC(DBMS_RANDOM.VALUE(1, 26)) FROM Patient p;
+
+COMMIT;
