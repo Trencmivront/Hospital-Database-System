@@ -1,6 +1,3 @@
--- Insert Test Records for Hospital Database System (Oracle Compatible)
-
--- 1. Location Hierarchy
 INSERT INTO Country (country_name) VALUES ('Turkiye');
 INSERT INTO Country (country_name) VALUES ('USA');
 INSERT INTO Country (country_name) VALUES ('UK');
@@ -105,11 +102,9 @@ INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES 
 INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('The Rocks', 21, '2000');
 INSERT INTO Neighbourhood (neighbourhood_name, district_id, postal_code) VALUES ('Vila Madalena', 22, '05445-000');
 
--- Bulk Addresses (150 addresses)
 INSERT INTO Address (neighbourhood_id) 
 SELECT TRUNC(DBMS_RANDOM.VALUE(1, 26)) FROM DUAL CONNECT BY LEVEL <= 150;
 
--- 2. Metadata
 INSERT INTO Blood_Type (type_name) VALUES ('A+');
 INSERT INTO Blood_Type (type_name) VALUES ('A-');
 INSERT INTO Blood_Type (type_name) VALUES ('B+');
@@ -202,13 +197,11 @@ INSERT INTO Payment_Method (type_name) VALUES ('Western Union');
 INSERT INTO Payment_Method (type_name) VALUES ('MoneyGram');
 INSERT INTO Payment_Method (type_name) VALUES ('Payoneer');
 
--- 3. Schedules for June 3 and June 8, 2026
--- 36 slots per day (9 hours * 4 slots/hour)
 INSERT INTO Schedule (schedule_date, schedule_time) 
 WITH hours AS (SELECT level + 7 AS h FROM dual CONNECT BY level <= 10),
      mins AS (SELECT (level - 1) * 15 AS m FROM dual CONNECT BY level <= 4)
 SELECT DATE '2026-06-03', 
-       TO_TIMESTAMP('2026-06-03 ' || LPAD(h, 2, '0') || ':' || LPAD(m, 2, '0') || ':00', 'YYYY-MM-DD HH24:MI:SS')
+       LPAD(h, 2, '0') || ':' || LPAD(m, 2, '0')
 FROM hours CROSS JOIN mins
 WHERE h <> 12;
 
@@ -216,11 +209,10 @@ INSERT INTO Schedule (schedule_date, schedule_time)
 WITH hours AS (SELECT level + 7 AS h FROM dual CONNECT BY level <= 10),
      mins AS (SELECT (level - 1) * 15 AS m FROM dual CONNECT BY level <= 4)
 SELECT DATE '2026-06-08', 
-       TO_TIMESTAMP('2026-06-08 ' || LPAD(h, 2, '0') || ':' || LPAD(m, 2, '0') || ':00', 'YYYY-MM-DD HH24:MI:SS')
+       LPAD(h, 2, '0') || ':' || LPAD(m, 2, '0')
 FROM hours CROSS JOIN mins
 WHERE h <> 12;
 
--- 4. Emergency Persons
 INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('John', 'Doe', '555-0001', 'M');
 INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Jane', 'Smith', '555-0002', 'F');
 INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Mehmet', 'Yilmaz', '555-0003', 'M');
@@ -247,7 +239,6 @@ INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_g
 INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Wanda', 'Maximoff', '555-0024', 'F');
 INSERT INTO Emergency_Person (emg_first_name, emg_last_name, emg_phone_no, emg_gender) VALUES ('Bucky', 'Barnes', '555-0025', 'M');
 
--- 5. Doctors (25 Doctors)
 INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Gregory', 'House', DATE '1959-05-15', '101', '555-1001', 'house@hospital.com', 'M', 0, 1, 1, NULL);
 INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('James', 'Wilson', DATE '1967-02-28', '102', '555-1002', 'wilson@hospital.com', 'M', 0, 1, 2, NULL);
 INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Lisa', 'Cuddy', DATE '1966-07-03', '103', '555-1003', 'cuddy@hospital.com', 'F', 0, 1, 3, NULL);
@@ -274,7 +265,6 @@ INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number
 INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Meredith', 'Grey', DATE '1978-11-10', '209', '555-1024', 'grey@hospital.com', 'F', 1, 1, 24, NULL);
 INSERT INTO Doctor (doc_first_name, doc_last_name, doc_birth_date, office_number, doc_phone_no, doc_email, doc_gender, is_married, job_status_id, address_id, dept_id) VALUES ('Derek', 'Shepherd', DATE '1966-08-16', '210', '555-1025', 'mcdreamy@hospital.com', 'M', 1, 1, 25, NULL);
 
--- 6. Departments (25 Departments)
 INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Diagnostic Medicine', '555-2001', 'Specializes in difficult cases.', 1);
 INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Oncology', '555-2002', 'Cancer treatment and research.', 2);
 INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Administration', '555-2003', 'Hospital management.', 3);
@@ -301,7 +291,6 @@ INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor)
 INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Anesthesiology', '555-2024', 'Pain management and anesthesia.', 15);
 INSERT INTO Department (dept_name, dept_phone_no, dept_description, head_doctor) VALUES ('Pathology', '555-2025', 'Laboratory diagnostics.', 7);
 
--- 7. Update Doctors with Department IDs
 UPDATE Doctor SET dept_id = 1 WHERE doctor_id IN (1, 8, 9, 10, 11);
 UPDATE Doctor SET dept_id = 2 WHERE doctor_id = 2;
 UPDATE Doctor SET dept_id = 3 WHERE doctor_id = 3;
@@ -320,7 +309,6 @@ UPDATE Doctor SET dept_id = 15 WHERE doctor_id = 23;
 UPDATE Doctor SET dept_id = 16 WHERE doctor_id = 24;
 UPDATE Doctor SET dept_id = 17 WHERE doctor_id = 25;
 
--- 8. Patients (40 Patients)
 INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Alice', 'Wonderland', DATE '1995-03-12', 'F', '555-3001', 'alice@wonder.com', 1, 16);
 INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Bob', 'Builder', DATE '1980-11-20', 'M', '555-3002', 'bob@build.com', 3, 17);
 INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Charlie', 'Brown', DATE '2010-10-30', 'M', '555-3003', 'charlie@peanuts.com', 7, 18);
@@ -362,7 +350,6 @@ INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, 
 INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Mary', 'Jane', DATE '1982-08-15', 'F', '555-3039', 'mj@dailybugle.com', 3, 54);
 INSERT INTO Patient (pat_first_name, pat_last_name, pat_birth_date, pat_gender, pat_phone_no, pat_email, blood_id, address_id) VALUES ('Neo', 'Anderson', DATE '1962-03-11', 'M', '555-3040', 'neo@matrix.com', 5, 55);
 
--- 8.5 Doctor_Schedule (Availability matching appointments)
 INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (1, 1, 1);
 INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (1, 2, 1);
 INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (1, 3, 1);
@@ -444,7 +431,6 @@ INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (6, 38, 1
 INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (7, 39, 1);
 INSERT INTO Doctor_Schedule (doctor_id, schedule_id, is_active) VALUES (8, 40, 1);
 
--- 9. Appointments (80 total, 40 per day)
 INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 1, 1, 1);
 INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 2, 1, 2);
 INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 3, 1, 3);
@@ -527,11 +513,9 @@ INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (
 INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 39, 7, 39);
 INSERT INTO Appointment (is_active, patient_id, doctor_id, schedule_id) VALUES (1, 40, 8, 40);
 
--- 10. Treatments
 INSERT INTO Treatment (appointment_id, icd10_id) 
 SELECT appointment_id, TRUNC(DBMS_RANDOM.VALUE(1, 26)) FROM Appointment;
 
--- 11. Bills
 INSERT INTO Bill (treatment_id, total_amount, tax, payment_id, is_paid) 
 SELECT treatment_id, 
        100 + DBMS_RANDOM.VALUE(0, 900), 
@@ -540,7 +524,6 @@ SELECT treatment_id,
        CASE WHEN DBMS_RANDOM.VALUE(0, 1) > 0.4 THEN 1 ELSE 0 END
 FROM Treatment;
 
--- 12. Allergies (25 Allergies)
 INSERT INTO Allergy (icd10_id) VALUES (1);
 INSERT INTO Allergy (icd10_id) VALUES (2);
 INSERT INTO Allergy (icd10_id) VALUES (3);
@@ -567,7 +550,6 @@ INSERT INTO Allergy (icd10_id) VALUES (23);
 INSERT INTO Allergy (icd10_id) VALUES (24);
 INSERT INTO Allergy (icd10_id) VALUES (25);
 
--- 13. Junction Tables
 INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (1, 1);
 INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (1, 2);
 INSERT INTO Doctor_Specialization (doctor_id, spec_id) VALUES (2, 2);
@@ -620,7 +602,6 @@ INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (18, 21);
 INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (19, 22);
 INSERT INTO Patient_Allergy (patient_id, allergy_id) VALUES (20, 23);
 
--- Patient - Emergency Person (Each patient has 1)
 INSERT INTO Patient_Emergency_Person (patient_id, emergency_id) 
 SELECT p.patient_id, TRUNC(DBMS_RANDOM.VALUE(1, 26)) FROM Patient p;
 
